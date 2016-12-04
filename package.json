@@ -1,0 +1,34 @@
+{
+  "name": "permissions-app",
+  "version": "1.0.0",
+  "description": "web app for administering organization permissions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirkour/permissions-app.git"
+  },
+  "author": "amir kouretchian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amirkour/permissions-app/issues"
+  },
+  "homepage": "https://github.com/amirkour/permissions-app#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "es6-promise": "^4.0.5",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "jade": "^1.11.0",
+    "mysql": "^2.12.0",
+    "sequelize": "^3.27.0",
+    "stylus": "^0.54.5"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "gulp-stylus": "^2.6.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
