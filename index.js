@@ -17,7 +17,7 @@ var Promise = require('es6-promise').Promise,
     absolutePathToViewFolder = path.join(__dirname, 'views'),
 
 	// TODO - get db via submodule
-    // db = require('./notes-mysql/models/index.js'),
+    db = require('./permissions/models/index.js'),
 
     app = express();
 
@@ -32,8 +32,12 @@ app.set('view engine', 'pug');
 app.get("/", function(req,res){
     res.render('homepage');
 });
-app.get("/app",function(res,res){
-    res.render('permissions-app');
+app.get("/app",function(req,res){
+    db.Organization.findAll().then(function(orgs){
+        res.render('permissions-app', {orgs: orgs});
+    }).catch(function(err){
+        res.status(500).render('permissions-app', {err: err});
+    });
 });
 
 console.log('listening on port ' + port);
