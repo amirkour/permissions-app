@@ -27,10 +27,13 @@ app.use(bodyparser.urlencoded({extended: false}));
 app.use(express.static(absolutePathToPublicAssets));
 app.use(stylus.middleware(absolutePathToPublicAssets));
 app.set('views', absolutePathToViewFolder);
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 app.get("/", function(req,res){
-    res.render('index');
+    res.render('homepage');
+});
+app.get("/app",function(res,res){
+    res.render('permissions-app');
 });
 
 console.log('listening on port ' + port);
