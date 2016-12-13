@@ -1,4 +1,5 @@
-var Organizations = require('./jsx/organizations.jsx'),
+var Promise = require('es6-promise').Promise,
+	Organizations = require('./jsx/organizations.jsx'),
 	React = require('react'),
 	ReactDOM = require('react-dom');
 
