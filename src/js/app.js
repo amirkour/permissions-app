@@ -1,12 +1,11 @@
-var Foo = require("./jsx/foo.jsx"),
+var Organizations = require('./jsx/organizations.jsx'),
 	React = require('react'),
 	ReactDOM = require('react-dom');
 
 (function($,window,document,undefined){
 	$(document).ready(function(){
-		console.log("hi wadsforldasdf!?");
 		ReactDOM.render(
-			<Foo />,
+			<Organizations />,
 			document.getElementById('app-body')
 		);
 	});
